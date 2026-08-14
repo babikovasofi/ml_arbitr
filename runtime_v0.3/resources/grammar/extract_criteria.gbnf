@@ -1,0 +1,8 @@
+root ::= "[" ws (criterion ("," ws criterion)*)? ws "]"
+criterion ::= "{" ws "\"name\"" ws ":" ws string ws "," ws "\"max_score\"" ws ":" ws score ws "," ws "\"options\"" ws ":" ws options ws "}"
+options ::= "[" ws (option ("," ws option)*)? ws "]"
+option ::= "{" ws "\"name\"" ws ":" ws string ws "," ws "\"score\"" ws ":" ws score ws "}"
+score ::= integer | "null"
+string ::= "\"" ( [^"\\\x7F\x00-\x1F] | "\\" (["\\/bfnrt] | "u" [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F]) )* "\""
+integer ::= "0" | [1-9] [0-9]*
+ws ::= [ \t\n]*

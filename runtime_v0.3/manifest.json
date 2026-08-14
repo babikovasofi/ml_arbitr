@@ -1,0 +1,98 @@
+{
+  "version": "v0.3",
+  "base_url": "https://storage.yandexcloud.net/arbitratorbucket1/arbitr/models/v0.3/",
+  "shared": [
+    {
+      "path": "shared/rubert-tiny2-tokenizer/special_tokens_map.json",
+      "size_bytes": 695,
+      "sha256": "5d5b662e421ea9fac075174bb0688ee0d9431699900b90662acd44b2a350503a"
+    },
+    {
+      "path": "shared/rubert-tiny2-tokenizer/tokenizer.json",
+      "size_bytes": 2413691,
+      "sha256": "139995a730139fb2158226e69c5879159c020a71c33c87d65124914663f618ad"
+    },
+    {
+      "path": "shared/rubert-tiny2-tokenizer/tokenizer_config.json",
+      "size_bytes": 1458,
+      "sha256": "71b22b163773e6d2a3bc53236a6dca9245f2e0422b09e2d9597dbf02825c7135"
+    },
+    {
+      "path": "shared/rubert-tiny2-tokenizer/vocab.txt",
+      "size_bytes": 1080667,
+      "sha256": "f056a69b097422652053bf87565c35543e5d81540ca4b7dddd28de4157a969e0"
+    },
+    {
+      "path": "shared/rubert-tiny2.onnx",
+      "size_bytes": 116451756,
+      "sha256": "2c868b6212c0ad28289e4c81f3ffee9ac17c296a8fc999ee011ac97917302c32"
+    },
+    {
+      "path": "resources/grammar/confirm_grammar.gbnf",
+      "size_bytes": 106,
+      "sha256": "3fccf703716093a5abb717abce06c3db20dd3d016f7583bc233338ecea5a717e"
+    },
+    {
+      "path": "resources/grammar/extract_criteria.gbnf",
+      "size_bytes": 535,
+      "sha256": "4d1c7a383873ba236a8c24d36a4370c089c390f326fd7d7ebd806a425d94a14b"
+    },
+    {
+      "path": "resources/prompts/confirm_statement.txt",
+      "size_bytes": 350,
+      "sha256": "55c4cedcba2910fd3cbba0890574f1f5fe41da7597b6cbdf67f3b3c52c9c8b33"
+    },
+    {
+      "path": "resources/prompts/extract_criteria.txt",
+      "size_bytes": 2433,
+      "sha256": "ece8539fbff1582f7af346f8589ab0f82aae4d5e1de32d259db703ec0985b10b"
+    },
+    {
+      "path": "resources/prompts/score_level.txt",
+      "size_bytes": 1965,
+      "sha256": "8b7808ba38bd05f3fe6d5935adef5fec24119c685b86aa1bad76da9d8c17a355"
+    },
+    {
+      "path": "resources/prompts/score_level_hints.txt",
+      "size_bytes": 2300,
+      "sha256": "ed023e33dcd3339376ca8ac90954bcef77ce37cd126f4306389a1d3071672e6e"
+    },
+    {
+      "path": "resources/prompts/speech_protocol.txt",
+      "size_bytes": 440,
+      "sha256": "36a5dea25920ed0493a53dc31dbce9b49dd592a603426d7702b20e089274699a"
+    }
+  ],
+  "variants": [
+    {
+      "id": "qwen3.5-2b",
+      "title": "Полная модель",
+      "description": "Qwen3.5 2B. Точнее оценивает, требует больше памяти и времени. Нужно от 1.8 ГБ свободной оперативной памяти.",
+      "min_free_ram_mb": 1800,
+      "recommended_free_ram_mb": 3000,
+      "min_cpu_cores": 4,
+      "files": [
+        {
+          "path": "qwen3.5-2b/qwen3.5-2b-q4_k_m.gguf",
+          "size_bytes": 1280835840,
+          "sha256": "aaf42c8b7c3cab2bf3d69c355048d4a0ee9973d48f16c731c0520ee914699223"
+        }
+      ]
+    },
+    {
+      "id": "qwen3.5-0.8b",
+      "title": "Лёгкая модель",
+      "description": "Qwen3.5 0.8B. Быстрее и меньше, оценки грубее. Нужно от 700 МБ свободной оперативной памяти.",
+      "min_free_ram_mb": 700,
+      "recommended_free_ram_mb": 1300,
+      "min_cpu_cores": 4,
+      "files": [
+        {
+          "path": "qwen3.5-0.8b/qwen3.5-0.8b-q4_k_m.gguf",
+          "size_bytes": 532517120,
+          "sha256": "bd258782e35f7f458f8aced1adc053e6e92e89bc735ba3be89d38a06121dc517"
+        }
+      ]
+    }
+  ]
+}
